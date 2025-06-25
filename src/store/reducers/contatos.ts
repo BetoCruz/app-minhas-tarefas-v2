@@ -9,7 +9,7 @@ const initialState: ContatosState = {
   itens: [
     {
       id: 1,
-      nome: 'Fulano',
+      nome: 'Mayara , o caféta bom ???',
       email: 'fulano@email.com',
       telefone: '1112345678'
     },
