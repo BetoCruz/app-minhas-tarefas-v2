@@ -33,13 +33,13 @@ const initialState: ContatosState = {
     },
     {
       id: 5,
-      nome: 'Nome 4',
+      nome: 'Nome 5',
       email: 'nome4@email.com',
       telefone: '1112345678'
     },
     {
       id: 6,
-      nome: 'Nome 4',
+      nome: 'Nome 6',
       email: 'nome4@email.com',
       telefone: '1112345678'
     }

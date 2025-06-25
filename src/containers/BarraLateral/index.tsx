@@ -3,6 +3,7 @@ import * as S from './styles'
 import { Campo } from '../../styles'
 import { RootReducer } from '../../store'
 import { alteraTermo } from '../../store/reducers/filtro'
+import { Titulo } from '../../styles'
 
 const BarraLateral = () => {
   // captura os dados pela função de callback dentro da função onChange.
@@ -12,7 +13,7 @@ const BarraLateral = () => {
 
   return (
     <S.Aside>
-      <h2>Pequisa de contatos</h2>
+      <Titulo>Pequisa de contatos</Titulo>
       <Campo
         value={termo}
         onChange={(e) => dispatch(alteraTermo(e.target.value))}

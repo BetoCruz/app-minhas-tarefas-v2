@@ -39,17 +39,17 @@ const Contato = ({
 
   return (
     <S.Card>
-      <S.nome
+      <S.imputPadrao
         disabled={!estaEditando}
         value={nome}
         onChange={(e) => setNome(e.target.value)}
       />
-      <S.email
+      <S.imputPadrao
         disabled={!estaEditando}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <S.telefone
+      <S.imputPadrao
         disabled={!estaEditando}
         value={telefone}
         onChange={(e) => setTelefone(e.target.value)}

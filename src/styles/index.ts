@@ -25,11 +25,12 @@ export const MainContainer = styled.main`
 // Extrutura de resposta alterada par atitulo , devido a melhor adequação de termos para c
 export const Titulo = styled.h2`
   display: block;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 18px;
   font-weight: bold;
   border-bottom: 5px solid #b8b4b4;
+  font-family: ${variaveis.fontPrimaria};
 `
 export const Campo = styled.input`
   padding: 8px;
@@ -55,7 +56,9 @@ export const Botao = styled.button`
 
 export const BotaoSalvar = styled(Botao)`
   background-color: ${variaveis.verde};
-  margin-top: 16px;
+  &:hover {
+    opacity: 0.8;
+  }
 `
 
 export default EstiloGlobal

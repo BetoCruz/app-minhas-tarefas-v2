@@ -17,4 +17,8 @@ export const Botao = styled(Link)`
   font-size: 40px;
   cursor: pointer;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }}
 `
