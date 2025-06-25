@@ -52,6 +52,9 @@ export const Botao = styled.button`
   background-color: ${variaveis.azulEscuro};
   border-radius: 8px;
   margin-right: 8px;
+  &:hover {
+    opacity: 0.8;
+  }
 `
 
 export const BotaoSalvar = styled(Botao)`

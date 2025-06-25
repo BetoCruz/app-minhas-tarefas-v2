@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom'
 
 import Contato from '../../models/Contato'
 import { cadastrar } from '../../store/reducers/contatos'
-import { Form } from './styles'
-import { MainContainer, Titulo, Campo, BotaoSalvar } from '../../styles'
+import * as S from './styles'
+import { MainContainer, Titulo, BotaoSalvar } from '../../styles'
 
 const Formulario = () => {
   const dispatch = useDispatch()
@@ -25,9 +25,9 @@ const Formulario = () => {
   return (
     <MainContainer>
       <Titulo>Novo Contato</Titulo>
-      <Form onSubmit={cadastrarContato}>
+      <S.Form onSubmit={cadastrarContato}>
         <label htmlFor="nome">Nome</label>
-        <Campo
+        <S.campoCadastro
           value={nome}
           onChange={({ target }) => setNome(target.value)}
           type="text"
@@ -36,7 +36,7 @@ const Formulario = () => {
         {''}
 
         <label htmlFor="email">E-mail</label>
-        <Campo
+        <S.campoCadastro
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="text"
@@ -45,7 +45,7 @@ const Formulario = () => {
         {''}
 
         <label htmlFor="telefone">Telefone</label>
-        <Campo
+        <S.campoCadastro
           value={telefone}
           onChange={(e) => setTelefone(e.target.value)}
           type="text"
@@ -53,7 +53,7 @@ const Formulario = () => {
         />
         {''}
         <BotaoSalvar type="submit">Cadastrar</BotaoSalvar>
-      </Form>
+      </S.Form>
     </MainContainer>
   )
 }

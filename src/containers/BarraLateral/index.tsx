@@ -1,25 +1,40 @@
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+
 import * as S from './styles'
 import { Campo } from '../../styles'
 import { RootReducer } from '../../store'
 import { alteraTermo } from '../../store/reducers/filtro'
-import { Titulo } from '../../styles'
+import { Titulo, Botao } from '../../styles'
 
-const BarraLateral = () => {
-  // captura os dados pela função de callback dentro da função onChange.
+type Props = {
+  mostrarFiltro: boolean
+}
+
+const BarraLateral = ({ mostrarFiltro }: Props) => {
+  const navigate = useNavigate()
   const dispatch = useDispatch()
-  // Consome dados do estado pela propriedade value do input.
   const { termo } = useSelector((state: RootReducer) => state.filtro)
 
   return (
     <S.Aside>
-      <Titulo>Pequisa de contatos</Titulo>
-      <Campo
-        value={termo}
-        onChange={(e) => dispatch(alteraTermo(e.target.value))}
-        type="text"
-        placeholder="Pesquisar"
-      />
+      <div>
+        {mostrarFiltro ? (
+          <>
+            <Titulo>Pequisa de contatos</Titulo>
+            <Campo
+              value={termo}
+              onChange={(e) => dispatch(alteraTermo(e.target.value))}
+              type="text"
+              placeholder="Pesquisar"
+            />
+          </>
+        ) : (
+          <Botao onClick={() => navigate('/')} type="button">
+            Voltar para a lista de contatos
+          </Botao>
+        )}
+      </div>
     </S.Aside>
   )
 }

@@ -5,7 +5,7 @@ import ListaDeContato from '../../containers/ListaDeContatos'
 const Home = () => {
   return (
     <>
-      <BarraLateral />
+      <BarraLateral mostrarFiltro={true} />
       <ListaDeContato />
       <BotaoCadastrar />
     </>
